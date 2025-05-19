@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --DarkBlue: hsl(211, 23%, 21%);
+    --DarkBlueBack: hsl(213, 11%, 32%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+    padding: 1.5rem 1.5rem;
+    background-color: var(--VeryDarkBlue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: var(--DarkBlue);
+    padding: 1.5rem;
+    border-radius: .6rem;
+}
+
+.rating-form .star {
+    background-color: var(--DarkBlueBack);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    padding: .6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.rating-form .star img {
+    width: 100%;
+}
+
+.rating-form h1 {
+    color: var(--White);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+}
+
+.rating-form p {
+    color: var(--LightGrey);
+    font-size: .9rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.3rem;
+}
+
+.rating-rates {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.rating-form span {
+    background-color: var(--DarkBlueBack);
+    color: var(--LightGrey);
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.rating-form span:hover {
+    background-color: var(--Orange);
+    color: var(--DarkBlue);
+}
+
+.rating-form span:active {
+    background-color: var(--White);
+    color: var(--DarkBlue);
+}
+
+.rating-form .selected {
+    background-color: var(--White);
+    color: var(--DarkBlue);
+}
+
+.submit-btn {
+    background-color: var(--Orange);
+    color: var(--VeryDarkBlue);
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.success .rating-form {
+    display: none;
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+}
+
+.success .success-message {
+    display: block;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.success .success-message img {
+    width: 100%;
+    max-width: 10rem;
+    margin-bottom: 1.2rem;
+}
+
+.success .success-message h4 {
+    color: rgba(255, 136, 0, 0.692);
+    background-color: var(--DarkBlueBack);
+    border-radius: 1rem;
+    display: inline-block;
+    padding: .3rem .9rem;
+    font-size: .8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.success .success-message h2 {
+    color: var(--White);
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 1.3rem;
+}
+
+.success .success-message p {
+    color: var(--LightGrey);
+    font-size: .8rem;
+    line-height: 1.3rem;
+    font-weight: 600;
+}
+
+/* overlay */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.success .overlay {
+    pointer-events: all;
+}
+
+@media (min-width: 400px) {
+    #main {
+        max-width: 22rem;
+    }
+
+    .rating-form p {
+        font-size: .8rem;
+    }
+
+    .rating-form span {
+        height: 3rem;
+        width: 3rem;
+        cursor: pointer;
+    }
+
+    .success .success-message p {
+        margin-bottom: 1.5rem;
+        font-size: .82rem;
+    }
+
+    .submit-btn:hover {
+        background-color: var(--White);
+        color: var(--DarkBlue);
+        cursor: pointer;
+    }
+}
